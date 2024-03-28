@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'jenkins-agent' }
+    agent { label 'Jenkins-Agent' }
 
 	tools {
         jdk 'Java17'
@@ -15,7 +15,7 @@ pipeline {
 
 		stage("Checkout from SCM"){
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/leonce1234/ci-cd-pipeline.git'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/Ashfaque-9x/register-app'
             }
         }
 
@@ -32,3 +32,5 @@ pipeline {
             }
 
         }
+    }
+}
